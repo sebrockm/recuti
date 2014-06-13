@@ -1,0 +1,61 @@
+package de.recuti;
+
+import de.recuti.util.SystemUiHider;
+
+import android.app.Activity;
+import android.app.TimePickerDialog;
+import android.os.Bundle;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+import android.widget.TimePicker;
+
+/**
+ * An example full-screen activity that shows and hides the system UI (i.e.
+ * status bar and navigation/system bar) with user interaction.
+ *
+ * @see SystemUiHider
+ */
+public class MainActivity extends Activity {
+
+	private TextView mainChrono;
+	private TextView subChrono1;
+	private TextView subChrono2;
+	private TimePickerDialog timePickerDialog;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        mainChrono = (TextView) findViewById(R.id.textView1);
+        subChrono1 = (TextView) findViewById(R.id.textView2);
+        subChrono2 = (TextView) findViewById(R.id.textView3);
+        
+        timePickerDialog = new TimePickerDialog(this.getApplicationContext(), new TimePickerDialog.OnTimeSetListener() {
+			
+			@Override
+			public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+				mainChrono.setText(hourOfDay + ":" + minute);
+			}
+		}, 0, 0, false);
+        
+        mainChrono.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				mainChrono.setText("bla");
+				//timePickerDialog.show();
+			}
+		});
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+    }
+
+}

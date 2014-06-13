@@ -1,0 +1,38 @@
+package de.recuti;
+
+import de.recuti.util.SystemUiHider;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Chronometer;
+
+/**
+ * An example full-screen activity that shows and hides the system UI (i.e.
+ * status bar and navigation/system bar) with user interaction.
+ *
+ * @see SystemUiHider
+ */
+public class MainActivity extends Activity {
+
+	private Chronometer mainChrono;
+	private Chronometer subChrono1;
+	private Chronometer subChrono2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        mainChrono = (Chronometer) findViewById(R.id.mainChrono);
+        subChrono1 = (Chronometer) findViewById(R.id.subChrono1);
+        subChrono2 = (Chronometer) findViewById(R.id.subChrono2);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+    }
+
+}
