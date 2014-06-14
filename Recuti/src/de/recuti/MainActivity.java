@@ -1,6 +1,5 @@
 package de.recuti;
 
-import java.util.StringTokenizer;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -13,7 +12,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.EditText;
 
 /**
@@ -23,126 +21,203 @@ import android.widget.EditText;
  * @see SystemUiHider
  */
 public class MainActivity extends Activity {
+	
+	private class ChronoMinSec {
+		private EditText text;
+		private int min, sec;
+		private int origMin, origSec;
+		private Runnable zeroCallback;
+		
+		private Runnable setText = new Runnable () {
+			@Override
+			public void run() {
+				text.setText(String.format("%02d:%02d", min, sec));
+			}
+		};
+		
+		public void reset() {
+			min = origMin;
+			sec = origSec;
+			runOnUiThread(setText);
+		}
+		
+		public void countDown() {
+			sec--;
+			if(sec == 0 && min == 0) {
+				zeroCallback.run();
+			}
+			else if(sec < 0) {
+				sec = 59;
+				min--;
+			}
+			
+			runOnUiThread(setText);
+		}
+		
+		private ChronoMinSec(EditText text, int min, int sec) {
+			this.text = text;
+			this.min = this.origMin = min;
+			this.sec = this.origSec = sec;
+			
+			runOnUiThread(setText);
+			
+			text.addTextChangedListener(new TextWatcher () {
 
-	private EditText mainChrono;
-	private int mainMin = 0, mainSec = 0;
+	        	private CharSequence old = ChronoMinSec.this.text.getText();
+	        	private int colons = 1;
+	        	
+				@Override
+				public void afterTextChanged(Editable s) {
+					if(MainActivity.this.countDown)
+						return;
+					
+					if(!old.toString().equals(s.toString())) {
+						s.replace(0, s.length(), old);
+					}
+				}
 	
-	private EditText subChrono1;
-	private int sub1Min, sub1Sec;
+				@Override
+				public void beforeTextChanged(CharSequence s, int start, int count,
+						int after) {
+				}
 	
-	private EditText subChrono2;
-	private int sub2Min, sub2Sec;
+				@Override
+				public void onTextChanged(CharSequence s, int start, int before, int count) {
+					if(MainActivity.this.countDown)
+						return;
+					
+					colons = 0;
+					for(int i = 0; i < s.length(); i++) {
+						if(s.charAt(i) == ':') {
+							if(++colons >= 2) {
+								colons = 1;
+								return;
+							}
+						}
+					}
+					String[] tok = s.toString().split(":");
+					if(s.length() == 0) {
+						
+					}
+					else if(tok.length == 1) {
+						try {
+							ChronoMinSec.this.min = tok[0].length() == 0 ? 0 : Integer.parseInt(tok[0]);
+							ChronoMinSec.this.origMin = ChronoMinSec.this.min;
+						} catch (NumberFormatException e) {
+							return;
+						}
+						ChronoMinSec.this.sec = 0;
+						ChronoMinSec.this.origSec = ChronoMinSec.this.sec;
+					}
+					else if(tok.length == 2) {
+						try {
+							ChronoMinSec.this.min = tok[0].length() == 0 ? 0 : Integer.parseInt(tok[0]);
+							ChronoMinSec.this.sec = tok[1].length() == 0 ? 0 : Integer.parseInt(tok[1]);
+							ChronoMinSec.this.origMin = ChronoMinSec.this.min;
+							ChronoMinSec.this.origSec = ChronoMinSec.this.sec;
+						} catch (NumberFormatException e) {
+							return;
+						}
+						if(ChronoMinSec.this.sec >= 60) {
+							return;
+						}
+					}
+					else {
+						return;
+					}
+					old = s.toString();
+				}
+	        	
+	        });
+		}
+		
+		public ChronoMinSec(EditText text, int min, int sec, Runnable zeroCallback) {
+			this(text, min, sec);
+			this.zeroCallback = zeroCallback;
+		}
+		
+		public ChronoMinSec(EditText text, int min, int sec, final int nextId) {
+			this(text, min, sec);
+			
+			this.zeroCallback = new Runnable() {
+				@Override
+				public void run() {
+					reset();
+					currentSubChronoId = nextId;
+					//TODO play sound
+				}
+			};
+		}
+	}
+
+	private ChronoMinSec mainChrono;
+	private ChronoMinSec subChrono[] = new ChronoMinSec[2];
+	private int currentSubChronoId = 0;
 	
 	private Button button;
 	
 	private Timer timer;
+	private boolean countDown = false;
+	
+	private void reset() {
+		currentSubChronoId = 0;
+		mainChrono.reset();
+		for(ChronoMinSec c : subChrono) {
+			c.reset();
+		}
+		
+		countDown = false;
+		if(timer != null) {
+			timer.cancel();
+		}
+		
+		runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				button.setText("Start");
+			}
+		});
+	}
+	
+	private Runnable mainZeroCallback = new Runnable() {
+		@Override
+		public void run() {
+			MainActivity.this.reset();
+			//TODO play sound
+		}
+	};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    	super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
-        mainChrono = (EditText) findViewById(R.id.editText1);
-        subChrono1 = (EditText) findViewById(R.id.editText2);
-        subChrono2 = (EditText) findViewById(R.id.editText3);
-        button = (Button) findViewById(R.id.button1);
-
+        mainChrono = new ChronoMinSec((EditText) findViewById(R.id.editText1), 36, 0, mainZeroCallback);
+        subChrono[0] = new ChronoMinSec((EditText) findViewById(R.id.editText2), 2, 0, 1);
+        subChrono[1] = new ChronoMinSec((EditText) findViewById(R.id.editText3), 1, 0, 0);
         
-        mainChrono.addTextChangedListener(new TextWatcher () {
-
-        	private CharSequence old = "00:00";
-        	private int colons = 1;
-        	
-			@Override
-			public void afterTextChanged(Editable s) {
-				if(!old.toString().equals(s.toString())) {
-					s.replace(0, s.length(), old);
-				}
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-				colons = 0;
-				for(int i = 0; i < s.length(); i++) {
-					if(s.charAt(i) == ':') {
-						if(++colons >= 2) {
-							colons = 1;
-							return;
-						}
-					}
-				}
-				String[] tok = s.toString().split(":");
-				if(s.length() == 0) {
-					
-				}
-				else if(tok.length == 1) {
-					try {
-						mainMin = Integer.parseInt(tok[0]);
-					} catch (NumberFormatException e) {
-						return;
-					}
-					mainSec = 0;
-				}
-				else if(tok.length == 2) {
-					try {
-						mainMin = Integer.parseInt(tok[0]);
-						mainSec = Integer.parseInt(tok[1]);
-					} catch (NumberFormatException e) {
-						return;
-					}
-					if(mainSec >= 60) {
-						return;
-					}
-				}
-				else {
-					return;
-				}
-				old = s.toString();
-			}
-        	
-        });
+        button = (Button) findViewById(R.id.button1);     
         
-        
-        button.setOnClickListener(new OnClickListener() {
-			private boolean done = false;
+        button.setOnClickListener(new OnClickListener() {			
 			@Override
-			public void onClick(View v) {
-				if(done)
-					return;
-				timer = new Timer(true);
-				timer.schedule(new TimerTask() {
-
-					@Override
-					public void run() {
-						runOnUiThread(new Runnable() {
-							@Override
-							public void run() {
-								if(mainSec == 0) {
-									if(mainMin == 0) {
-										timer.cancel();
-										done = false;
-									}
-									else {
-										mainMin--;
-										mainSec = 59;
-									}
-								}
-								else {
-									mainSec--;
-								}
-								
-								mainChrono.setText(String.format("%02d:%02d", mainMin, mainSec));
+			public void onClick(View v) {				
+				if(countDown) {
+					MainActivity.this.reset();
+				} else {
+					button.setText("Stop");
+					timer = new Timer(true);
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							if(countDown) {
+								subChrono[currentSubChronoId].countDown();
+								mainChrono.countDown();
 							}
-						});
-					}
-				}, 1000, 1000);
-				done = true;
+						}
+					}, 1000, 1000);
+					countDown = true;
+				}
 			}
 		});
         

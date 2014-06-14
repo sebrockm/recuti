@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="de.recuti.R.layout"/>
+<fullyQualifiedTypeName name="de.recuti.R.styleable"/>
+<fullyQualifiedTypeName name="android.view.animation.Animation"/>
+<fullyQualifiedTypeName name="android.widget.Chronometer"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.widget.TimePicker"/>
+<fullyQualifiedTypeName name="android.app.TimePickerDialog"/>
+<fullyQualifiedTypeName name="android.app.DialogFragment"/>
+<fullyQualifiedTypeName name="android.app.TimePickerDialog.OnTimeSetListener"/>
+<fullyQualifiedTypeName name="android.text.TextWatcher"/>
+<fullyQualifiedTypeName name="java.lang.CharSequence"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="de.recuti.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.util.TimerTask"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="19" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="65" y="24">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="144" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="276" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1402611620973" focus="true" label="Workspace - Resource">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="/home/sebastian/recuti/Recuti/res/layout/activity_main.xml" title="activity_main.xml" tooltip="Recuti/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Recuti/res/layout/activity_main.xml"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="/home/sebastian/recuti/Recuti/src/de/recuti/MainActivity.java" title="MainActivity.java" tooltip="Recuti/src/de/recuti/MainActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Recuti/src/de/recuti/MainActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3336" selectionTopPixel="1862"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" partName="R.java" path="/home/sebastian/recuti/Recuti/gen/de/recuti/R.java" title="R.java" tooltip="Recuti/gen/de/recuti/R.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Recuti/gen/de/recuti/R.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6e710882" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.23628429" ratioLeft="379" ratioRight="1225" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.6599064" ratioLeft="423" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.41945946" ratioLeft="388" ratioRight="537" relationship="4" relative="topLeft">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Recuti/src/de/recuti/MainActivity.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;java.util(Timer.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;android.os(Handler.class"/>
+</editors>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3143" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="Timer.class" index="1">
+<position/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3143" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="Timer.class" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3143" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3143" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2930" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2957" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3256" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2880" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2924" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3316" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2769" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2998" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2983" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3009" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3180" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3254" y="0"/>
+</item>
+<item historyLabel="Handler.class" index="2">
+<position/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3254" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2983" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3009" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3180" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3254" y="0"/>
+</item>
+<item historyLabel="Handler.class" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="3254" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2983" y="0"/>
+</item>
+<item active="true" historyLabel="MainActivity.java" index="0">
+<position info="not_deleted" x="2766" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Handler.class" tooltip="android.os.Handler">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;android.os(Handler.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Timer.class" tooltip="java.util.Timer">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;java.util(Timer.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="View.class" tooltip="android.view.View">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;android.view(View.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="TextView.class" tooltip="android.widget.TextView">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;android.widget(TextView.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InvocationTargetException.class" tooltip="java.lang.reflect.InvocationTargetException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Dialog.class" tooltip="android.app.Dialog">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Recuti/\/opt\/android-sdk-linux\/platforms\/android-19\/android.jar&lt;android.app(Dialog.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TimePickerFragment.java" tooltip="Recuti/src/de/recuti/TimePickerFragment.java">
+<persistable path="/Recuti/src/de/recuti/TimePickerFragment.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemUiHiderBase.java" tooltip="Recuti/src/de/recuti/util/SystemUiHiderBase.java">
+<persistable path="/Recuti/src/de/recuti/util/SystemUiHiderBase.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="Recuti/gen/de/recuti/R.java">
+<persistable path="/Recuti/gen/de/recuti/R.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemUiHiderHoneycomb.java" tooltip="Recuti/src/de/recuti/util/SystemUiHiderHoneycomb.java">
+<persistable path="/Recuti/src/de/recuti/util/SystemUiHiderHoneycomb.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SystemUiHider.java" tooltip="Recuti/src/de/recuti/util/SystemUiHider.java">
+<persistable path="/Recuti/src/de/recuti/util/SystemUiHider.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="Recuti/src/de/recuti/MainActivity.java">
+<persistable path="/Recuti/src/de/recuti/MainActivity.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BuildConfig.java" tooltip="Recuti/gen/de/recuti/BuildConfig.java">
+<persistable path="/Recuti/gen/de/recuti/BuildConfig.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="Recuti/res/layout/activity_main.xml">
+<persistable path="/Recuti/res/layout/activity_main.xml"/>
+</file>
+</mruList>
+</workbench>
