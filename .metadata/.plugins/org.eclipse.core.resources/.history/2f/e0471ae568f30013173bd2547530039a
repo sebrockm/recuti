@@ -3,10 +3,9 @@ package de.recuti;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import de.recuti.util.SystemUiHider;
 
 import android.app.Activity;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,7 +14,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-
+/**
+ * An example full-screen activity that shows and hides the system UI (i.e.
+ * status bar and navigation/system bar) with user interaction.
+ *
+ * @see SystemUiHider
+ */
 public class MainActivity extends Activity {
 	
 	private class ChronoMinSec {
@@ -38,10 +42,6 @@ public class MainActivity extends Activity {
 		}
 		
 		public void countDown() {
-			if(sec == 0 && min == 0) {//should only occur, if timer is set to 00:00
-				zeroCallback.run();
-			}
-			
 			sec--;
 			if(sec == 0 && min == 0) {
 				zeroCallback.run();
@@ -125,7 +125,6 @@ public class MainActivity extends Activity {
 					else {
 						return;
 					}
-					
 					old = s.toString();
 				}
 	        	
@@ -145,7 +144,7 @@ public class MainActivity extends Activity {
 				public void run() {
 					reset();
 					currentSubChronoId = nextId;
-					soundPool.play(soundId, 1, 1, 1, 0, 1);
+					//TODO play sound
 				}
 			};
 		}
@@ -159,9 +158,6 @@ public class MainActivity extends Activity {
 	
 	private Timer timer;
 	private boolean countDown = false;
-	
-	private SoundPool soundPool = new SoundPool(3, AudioManager.STREAM_ALARM, 0);
-	private int soundId;
 	
 	private void reset() {
 		currentSubChronoId = 0;
@@ -187,7 +183,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void run() {
 			MainActivity.this.reset();
-			soundPool.play(soundId, 1, 1, 1, 0, 1);
+			//TODO play sound
 		}
 	};
 
@@ -196,8 +192,6 @@ public class MainActivity extends Activity {
     	super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        
-        soundId = soundPool.load(getApplication(), R.raw.boxing_bell, 1);
 
         mainChrono = new ChronoMinSec((EditText) findViewById(R.id.editText1), 36, 0, mainZeroCallback);
         subChrono[0] = new ChronoMinSec((EditText) findViewById(R.id.editText2), 2, 0, 1);

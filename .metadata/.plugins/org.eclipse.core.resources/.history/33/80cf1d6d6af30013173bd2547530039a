@@ -3,6 +3,7 @@ package de.recuti;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import de.recuti.util.SystemUiHider;
 
 import android.app.Activity;
 import android.media.AudioManager;
@@ -15,7 +16,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-
+/**
+ * An example full-screen activity that shows and hides the system UI (i.e.
+ * status bar and navigation/system bar) with user interaction.
+ *
+ * @see SystemUiHider
+ */
 public class MainActivity extends Activity {
 	
 	private class ChronoMinSec {
